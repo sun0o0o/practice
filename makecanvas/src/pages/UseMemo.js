@@ -1,7 +1,7 @@
 import Info from '../components/Info';
 import { useState } from 'react';
 
-const UseCallback = () => {
+const UseMemo = () => {
   const [color, setColor] = useState('');
   const [movie, setMovie] = useState('');
 
@@ -53,4 +53,4 @@ const UseCallback = () => {
   );
 };
 
-export default UseCallback;
+export default UseMemo;
