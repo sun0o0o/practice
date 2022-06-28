@@ -41,3 +41,8 @@ const loop = async (list) => {
   console.log("끝");
 };
 loop(list2);
+
+//상황에 맞게 사용하기
+// 1. 비동기적으로 처리되어도 상관없을 때: forEach 함수 사용
+// 2. 각각의 요청에 대해 모두 await해야한다: 기다려야 하기때문에 느리지만 for loop 사용
+// 3. 요청이 끝나는 순서는 상관없다: map함수를 통해 promise 반환
