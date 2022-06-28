@@ -36,6 +36,7 @@ const loop = async (list) => {
   });
 
   const results = await Promise.all(promises);
+  //map은 promise 배열을 반환하기 때문에 배열의 모든 promise가 통과할 때까지 기다려주는 Promise.all()을 사용!
   results.forEach((data) => console.log(data));
   console.log("끝");
 };
