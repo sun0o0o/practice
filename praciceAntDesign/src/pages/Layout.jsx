@@ -8,6 +8,10 @@ import {
 import { Layout, Menu } from "antd";
 import React, { useState } from "react";
 import DebounceSearchBar from "../components/Debounce";
+import Throttle from "../components/Throttle";
+import PracticeThrottle from "../components/PracticeThrottle";
+import styled from "styled-components";
+
 const { Header, Sider, Content } = Layout;
 
 const LayoutPage = () => {
@@ -63,6 +67,10 @@ const LayoutPage = () => {
           }}
         >
           <DebounceSearchBar />
+          <Board>
+            <Throttle />
+            <PracticeThrottle />
+          </Board>
         </Content>
       </Layout>
     </Layout>
@@ -70,3 +78,12 @@ const LayoutPage = () => {
 };
 
 export default LayoutPage;
+
+const Board = styled.div`
+  position: relative;
+  display: flex;
+  margin-top: 50px;
+  width: 70vw;
+  height: 800px;
+  border: 2px solid purple;
+`;

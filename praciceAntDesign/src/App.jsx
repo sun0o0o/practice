@@ -14,7 +14,8 @@ const datas = [
 const App = () => {
   return (
     <div className="App">
-      <SearchBar datas={datas} />
+      {/* <SearchBar datas={datas} /> */}
+      <LayoutComponent />
     </div>
   );
 };
