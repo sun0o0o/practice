@@ -30,6 +30,7 @@ const PracticeThrottle = () => {
 
   return (
     <Container onScroll={onScroll}>
+      <p>throttle 연습</p>
       <div>
         {items.map((page, idx) => (
           <Box key={idx}>{page}</Box>

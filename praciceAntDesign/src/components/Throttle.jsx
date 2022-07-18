@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <Background onScroll={handleScroll}>
+      <p>원본</p>
       <div>
         {books.map((page, idx) => (
           <Page key={idx}>{page}</Page>

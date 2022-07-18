@@ -11,6 +11,7 @@ import DebounceSearchBar from "../components/Debounce";
 import Throttle from "../components/Throttle";
 import PracticeThrottle from "../components/PracticeThrottle";
 import styled from "styled-components";
+import Observer from "../components/Observer";
 
 const { Header, Sider, Content } = Layout;
 
@@ -70,6 +71,7 @@ const LayoutPage = () => {
           <Board>
             <Throttle />
             <PracticeThrottle />
+            <Observer />
           </Board>
         </Content>
       </Layout>
