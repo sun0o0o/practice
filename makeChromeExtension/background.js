@@ -1,11 +1,4 @@
-let color = "#3aa757";
-
-chrome.runtime.onInstalled.addListener(() => {
-  // chrome.storage.sync.set({ color });
-  // console.log("Default background color set to %cgreen", `color: ${color}`);
-  chrome.storage.sync.set({ email: "abc@google.com" });
-  chrome.storage.sync.get(["email"], function (result) {
-    console.log("email is " + result.email);
-  });
-});
-//storage에 사용자 email 저장
+chrome.runtime.onInstalled.addListener(() => {});
+//chrome storage에
+//localstorage에 저장된 값을 chrome storage에서 사용할 수 있지
+//오비스쪽 script에서 크롬 스크립트에 값을 저장해주시면 될것같은데..

@@ -17,6 +17,16 @@ const { Header, Sider, Content } = Layout;
 
 const LayoutPage = () => {
   const [collapsed, setCollapsed] = useState(false);
+
+  let abc = [
+    { aa: 1, bb: 2, cc: 3 },
+    {
+      aa: 1,
+      bb: 3,
+      cc: 4,
+    },
+  ];
+
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -73,6 +83,11 @@ const LayoutPage = () => {
             <PracticeThrottle />
             <Observer />
           </Board>
+          {abc.map((el) => (
+            <div key={el.aa}>
+              <div>{el.bb}</div>
+            </div>
+          ))}
         </Content>
       </Layout>
     </Layout>
