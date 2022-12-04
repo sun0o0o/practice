@@ -12,6 +12,10 @@ import Throttle from "../components/Throttle";
 import PracticeThrottle from "../components/PracticeThrottle";
 import styled from "styled-components";
 import Observer from "../components/Observer";
+import { Link } from "react-router-dom";
+import PDFFile from "../components/PDFFile";
+import { Badge, Descriptions, Button } from "antd";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const { Header, Sider, Content } = Layout;
 
@@ -44,7 +48,11 @@ const LayoutPage = () => {
             {
               key: "2",
               icon: <VideoCameraOutlined />,
-              label: "nav 2",
+              label: (
+                <div>
+                  <Link to="/nav2">nav2</Link>
+                </div>
+              ),
             },
             {
               key: "3",
@@ -77,7 +85,7 @@ const LayoutPage = () => {
             minHeight: 280,
           }}
         >
-          <DebounceSearchBar />
+          {/* <DebounceSearchBar />
           <Board>
             <Throttle />
             <PracticeThrottle />
@@ -87,7 +95,14 @@ const LayoutPage = () => {
             <div key={el.aa}>
               <div>{el.bb}</div>
             </div>
-          ))}
+          ))} */}
+          <PDFDownloadLink document={<PDFFile />} fileName="test.pdf">
+            download!!
+          </PDFDownloadLink>
+          <Button type="primary" size="large">
+            Download PDF
+          </Button>
+          <PDFFile />
         </Content>
       </Layout>
     </Layout>
