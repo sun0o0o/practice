@@ -16,6 +16,8 @@ import { Link } from "react-router-dom";
 import PDFFile from "../components/PDFFile";
 import { Badge, Descriptions, Button } from "antd";
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import Piechart from "../components/Piechart";
+import PracticeUseState from "../components/PracticeUseState";
 
 const { Header, Sider, Content } = Layout;
 
@@ -96,13 +98,15 @@ const LayoutPage = () => {
               <div>{el.bb}</div>
             </div>
           ))} */}
-          <PDFDownloadLink document={<PDFFile />} fileName="test.pdf">
+          {/* <PDFDownloadLink document={<PDFFile />} fileName="test.pdf">
             download!!
-          </PDFDownloadLink>
+          </PDFDownloadLink> */}
           <Button type="primary" size="large">
             Download PDF
           </Button>
-          <PDFFile />
+          {/* <PDFFile /> */}
+          <Piechart />
+          <PracticeUseState />
         </Content>
       </Layout>
     </Layout>
